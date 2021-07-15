@@ -1,0 +1,1274 @@
+{
+	"info": {
+		"_postman_id": "6768ab3c-c285-48db-828a-c1fa1b6dd0c3",
+		"name": "CourseLibrary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Authors",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Author",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/2ee49fe3-edf2-4f91-8409-3eb25ce6ca51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"2ee49fe3-edf2-4f91-8409-3eb25ce6ca51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Courses For Author",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/d28888e9-2ba9-473a-a40f-e38cb54f9b35/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"d28888e9-2ba9-473a-a40f-e38cb54f9b35",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Course For Author",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/d28888e9-2ba9-473a-a40f-e38cb54f9b35/courses/5b1c2b4d-48c7-402a-80c3-cc796ad49c6b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"d28888e9-2ba9-473a-a40f-e38cb54f9b35",
+						"courses",
+						"5b1c2b4d-48c7-402a-80c3-cc796ad49c6b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Filtered Authors",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?mainCategory=Rum",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "mainCategory",
+							"value": "Rum"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Search Authors",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?searchQuery=Ridley",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "searchQuery",
+							"value": "Ridley"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Filter and Search Authors",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?mainCategory=Rum&searchQuery=Ridley",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "mainCategory",
+							"value": "Rum"
+						},
+						{
+							"key": "searchQuery",
+							"value": "Ridley"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Skewers\",\r\n    \"dateOfBirth\": \"1968-03-04T00:00:00\",\r\n    \"mainCategory\": \"Rum\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Course for Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\": \"Top Pirate hits of last Decade\",\r\n   \"description\": \"Learn the lyrics of latest pirate hits\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/Authors/5b3621c0-7b12-4e80-9c8b-3398cba7ee05/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"Authors",
+						"5b3621c0-7b12-4e80-9c8b-3398cba7ee05",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Author with Courses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Skewers\",\r\n    \"dateOfBirth\": \"1968-03-04T00:00:00\",\r\n    \"mainCategory\": \"Rum\",\r\n    \"courses\": [\r\n        {\r\n   \"title\": \"Top Pirate hits of last Decade\",\r\n   \"description\": \"Learn the lyrics of latest pirate hits\"\r\n        },\r\n           {\r\n   \"title\": \"Drinking games for lazy pirates\",\r\n   \"description\": \"Best drinking game\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Author Collections",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"firstName\": \"Jane\",\r\n    \"lastName\": \"Skewers\",\r\n    \"dateOfBirth\": \"1968-03-04T00:00:00\",\r\n    \"mainCategory\": \"Rum\"\r\n},\r\n{    \r\n    \"firstName\": \"Jack\",\r\n    \"lastName\": \"Pepper\",\r\n    \"dateOfBirth\": \"1981-03-04T00:00:00\",\r\n    \"mainCategory\": \"Singing\"\r\n}\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/AuthorCollections",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"AuthorCollections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Author Collections",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/AuthorCollections/(d43e5af6-6b76-4f9c-b236-1091545ad00b,7016271f-4b5a-4204-b751-3827547dd82e)",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"AuthorCollections",
+						"(d43e5af6-6b76-4f9c-b236-1091545ad00b,7016271f-4b5a-4204-b751-3827547dd82e)"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Author to single resource",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/Authors/5b3621c0-7b12-4e80-9c8b-3398cba7ee05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"Authors",
+						"5b3621c0-7b12-4e80-9c8b-3398cba7ee05"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Course for Author - Validation Errors",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\": \"New Course\",\r\n   \"description\": \"New Course\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/Authors/5b3621c0-7b12-4e80-9c8b-3398cba7ee05/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"Authors",
+						"5b3621c0-7b12-4e80-9c8b-3398cba7ee05",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Course For Author",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\": \"Updated Course title\",\r\n   \"description\": \"Updated Course description\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors/da2fd609-d754-4feb-8acd-c4f9ff13ba96/courses/d173e20d-159e-4127-9ce9-b0ac2564ad97",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"courses",
+						"d173e20d-159e-4127-9ce9-b0ac2564ad97"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Course For Author (Upsert) Not existing course",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\": \"Updated Course title\",\r\n   \"description\": \"Updated Course description\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors/da2fd609-d754-4feb-8acd-c4f9ff13ba96/courses/d173e20d-159e-4127-9ce9-b0ac2564ad99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"courses",
+						"d173e20d-159e-4127-9ce9-b0ac2564ad99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Course For Author",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n   \"op\": \"replace\",\r\n   \"path\": \"/title\",\r\n   \"value\": \"Updated title\"\r\n    }\r\n]    "
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors/da2fd609-d754-4feb-8acd-c4f9ff13ba96/courses/d173e20d-159e-4127-9ce9-b0ac2564ad99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"courses",
+						"d173e20d-159e-4127-9ce9-b0ac2564ad99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Course For Author (Multiple)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n   \"op\": \"replace\",\r\n   \"path\": \"/description\",\r\n   \"value\": \"Updated description\"\r\n    }\r\n]    "
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors/da2fd609-d754-4feb-8acd-c4f9ff13ba96/courses/d173e20d-159e-4127-9ce9-b0ac2564ad99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"courses",
+						"d173e20d-159e-4127-9ce9-b0ac2564ad99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Course For Author (Remove)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n   \"op\": \"remove\",\r\n   \"path\": \"/description\"\r\n    }\r\n]    "
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors/da2fd609-d754-4feb-8acd-c4f9ff13ba96/courses/d173e20d-159e-4127-9ce9-b0ac2564ad99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"courses",
+						"d173e20d-159e-4127-9ce9-b0ac2564ad99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Course For Author (Copy)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n   \"op\": \"add\",\r\n   \"path\": \"/description\",\r\n   \"value\": \"New description\"\r\n    },\r\n     {\r\n   \"op\": \"copy\",\r\n   \"from\": \"/description\",\r\n   \"path\": \"/title\"\r\n    }\r\n]    "
+				},
+				"url": {
+					"raw": "http://localhost:51044/api/authors/da2fd609-d754-4feb-8acd-c4f9ff13ba96/courses/d173e20d-159e-4127-9ce9-b0ac2564ad99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"da2fd609-d754-4feb-8acd-c4f9ff13ba96",
+						"courses",
+						"d173e20d-159e-4127-9ce9-b0ac2564ad99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course For Author",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/d28888e9-2ba9-473a-a40f-e38cb54f9b35/courses/5b1c2b4d-48c7-402a-80c3-cc796ad49c6b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"d28888e9-2ba9-473a-a40f-e38cb54f9b35",
+						"courses",
+						"5b1c2b4d-48c7-402a-80c3-cc796ad49c6b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Author",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/d28888e9-2ba9-473a-a40f-e38cb54f9b35/courses/5b1c2b4d-48c7-402a-80c3-cc796ad49c6b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"d28888e9-2ba9-473a-a40f-e38cb54f9b35",
+						"courses",
+						"5b1c2b4d-48c7-402a-80c3-cc796ad49c6b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors (pagination)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?pageNumber=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors (orderBy name)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?orderBy=Name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "Name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors (orderBy name descending)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?orderBy=Name desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "Name desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors (orderBy mainCategory)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?orderBy=Name desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "Name desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors (orderBy multiple)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?orderBy=mainCategory,age",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "mainCategory,age"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors (orderBy invalid field)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?orderBy=dateofbirth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "dateofbirth"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors id (Data shaping) ",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?fields=id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors id,name (Data shaping) ",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?fields=id,name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Author (fields id,name) Data Shaping",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/2ee49fe3-edf2-4f91-8409-3eb25ce6ca51?fields=id,name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"2ee49fe3-edf2-4f91-8409-3eb25ce6ca51"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Author (fields FirstName) should fail",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/2ee49fe3-edf2-4f91-8409-3eb25ce6ca51?fields=id,name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"2ee49fe3-edf2-4f91-8409-3eb25ce6ca51"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Authors (fields firstName) should fail  (Data shaping) ",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors?fields=id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Author (HATEOAS)",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:51044/api/authors/2ee49fe3-edf2-4f91-8409-3eb25ce6ca51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "51044",
+					"path": [
+						"api",
+						"authors",
+						"2ee49fe3-edf2-4f91-8409-3eb25ce6ca51"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
